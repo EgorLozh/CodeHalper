@@ -1,0 +1,37 @@
+ # Model configurations
+models:
+  llm: "deepseek-coder-v2"  # LLM model name for ChatOllama
+  embedding: "nomic-embed-text"  # Embedding model name for OllamaEmbeddings
+
+# Document processing
+document:
+  available_types:
+    -".py"
+    -".js"
+    -".ts"
+    -".cpp"
+    -".c"
+    -".php"
+    -".java"
+    -".cs"
+    -".go"
+    -".rust"
+    -".md"
+    -".json"
+    -".html"
+    -".css"
+  chunk_size: 500
+  chunk_overlap: 50
+
+# Directory paths
+paths:
+  db_dir: "vectors_storage"  # Directory to save FAISS index
+
+# Retrieval settings
+retrieval:
+  template : | # Prompt template for the LLM, you can use {docs} and {query} as variables
+    You are a helpful assistant that can answer questions about the following code:
+    {docs}
+    Question: {query}
+    Answer:
+  default_k: 5  # Default number of documents to retrieve

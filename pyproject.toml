@@ -1,0 +1,14 @@
+[project]
+name = "codehalper"
+version = "0.1.0"
+description = "Add your description here"
+readme = "README.md"
+requires-python = ">=3.11"
+dependencies = [
+    "faiss-cpu>=1.11.0",
+    "langchain>=0.3.25",
+    "langchain-community>=0.3.24",
+    "langchain-ollama>=0.3.3",
+    "python-dotenv>=1.1.0",
+    "tqdm>=4.67.1",
+]
