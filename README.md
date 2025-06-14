@@ -43,6 +43,7 @@ source .venv/bin/activate   # на Unix/macOS
 
 3. Установите зависимости:
 ```bash
+pip install uv
 uv install -e .
 ```
 
