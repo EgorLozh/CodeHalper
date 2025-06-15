@@ -34,6 +34,8 @@ cd CodeHalper
 
 2. Создайте и активируйте виртуальное окружение:
 ```bash
+pip install uv
+
 uv venv
 
 source .venv/bin/activate   # на Unix/macOS
@@ -43,7 +45,6 @@ source .venv/bin/activate   # на Unix/macOS
 
 3. Установите зависимости:
 ```bash
-pip install uv
 uv install -e .
 ```
 
@@ -82,6 +83,6 @@ ollama serve
 
 2. Запустите приложение:
 ```bash
-python uv run src/cli.py
+uv run src/cli.py
 ```
 
